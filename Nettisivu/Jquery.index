@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <style> 
+        body {
+            background-color: #B2D9D9;
+            text-align: center;
+            font-family: Arial, sans-serif; 
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            z-index: -1;
+        }
+
+        #menuButton {
+            display: block;
+            background-color: transparent;
+            color: black;
+            padding: 10px;
+            margin-left: 517px;
+            margin-top: 270px;
+            width: 200px;
+            text-decoration: none;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        #menuButton:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #menu {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .menu-item {
+            display: block;
+            background-color: transparent;
+            color: black;
+            padding: 10px;
+            margin-left: 503px;
+            margin-top: 5px;
+            width: 200px;
+            text-decoration: none;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .menu-item:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<video id="video-background" autoplay muted loop>
+    <source src="jqueryNettisivu/video0.mp4" type="video/mp4">
+</video>
+
+<button id="menuButton" class="menuButton">MENU</button>
+
+<div id="menu">
+    <a href="Jquery1.index" class="menu-item">Punaviinit</a>
+    <a href="Jquery2.index" class="menu-item">Valkoviinit</a>
+    <a href="Jquery3.index" class="menu-item">Kuohuvat</a>
+    <a href="Jquery4.index" class="menu-item">Ota Meihin Yhteyttä</a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#menuButton").click(function() {
+            $("#menu").slideToggle("slow");
+        });
+    });
+</script>
+
+</body>
+</html>
